@@ -1,14 +1,14 @@
 import json
 from pathlib import Path
 
-import pandas as pd
+import boto3
 import mlflow
 import mlflow.xgboost
+import pandas as pd
 from dotenv import load_dotenv
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import train_test_split
 from xgboost import XGBClassifier
-import boto3
 
 from trial_conversion_model.data import load_processed
 from trial_conversion_model.features import TARGET
